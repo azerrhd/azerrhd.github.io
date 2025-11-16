@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dewa 19 - Lviosa</title>
+  <link rel="icon" type="image/png" href="images/L Viosa.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f8fbff;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background-image: url("images/r.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      color: white;
+      font-family: "Cinzel Decorative", serif;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+      font-family: "Cinzel Decorative", serif;
+    }
+
+    .logo span {
+      color: #ffb48b;
+    }
+
+    .section-box {
+      max-width: 900px;
+      margin: 60px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 40px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .section-box img {
+      width: 50%;
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      font-family: "Cinzel Decorative", serif;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .highlight {
+      color: #87cefa;
+      font-weight: bold;
+    }
+
+    /* === ALBUM GALLERY === */
+    .album-gallery {
+      margin-top: 40px;
+      text-align: center;
+      animation: fadeIn 1.4s ease;
+    }
+
+    .album-gallery h3 {
+      font-family: "Cinzel Decorative", serif;
+      font-size: 1.6rem;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .album-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .album-item {
+      width: 250px;
+      background: #f8fbff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s;
+    }
+
+    .album-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .album-item img {
+      width: 100%;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .album-item p {
+      padding: 10px;
+      color: #333;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* BUTTON AREA */
+    .btn-area {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .btn {
+      text-decoration: none;
+      background-color: #87cefa;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background-color: #ffb48bf3;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255,180,139,0.6);
+    }
+
+    footer {
+      background-image: url("images/footer.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 class="logo">L<span>viosa</span></h1>
+</header>
+
+<section class="section-box">
+
+  <img src="images/dewa19.jpg" alt="Dewa 19">
+
+  <h2>Dewa 19</h2>
+
+  <p><span class="highlight">Dewa 19</span> adalah salah satu band paling berpengaruh dalam sejarah musik Indonesia. Dengan kombinasi rock, pop, hingga sentuhan progresif, mereka menciptakan karya-karya abadi yang masih dinikmati dari generasi ke generasi.</p>
+
+  <p>Lirik yang kuat, komposisi yang megah, dan karakter khas Ahmad Dhani membuat Dewa 19 terus hidup dalam hati para pendengar.</p>
+
+  <!-- === ALBUM SHOWCASE === -->
+  <div class="album-gallery">
+    <h3>Album Dewa 19</h3>
+
+    <div class="album-grid">
+
+      <a href="album/dewa1.html" class="album-item">
+        <img src="images/oi.jpg" alt="Dewa 19 (Self Titled)">
+        <p>Dewa 19 (1992)</p>
+      </a>
+
+      <a href="album/dewa2.html" class="album-item">
+        <img src="images/by.jpg" alt="Bintang Lima">
+        <p>Bintang Lima (2000)</p>
+      </a>
+
+      <a href="album/dewa3.html" class="album-item">
+        <img src="images/bl.jpg" alt="Cintailah Cinta">
+        <p>Cintailah Cinta (2002)</p>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- BUTTON AREA -->
+  <div class="btn-area">
+    <a href="index.html#gallery" class="btn">← Back</a>
+
+    <a href="https://open.spotify.com/artist/3HqSLMAZ3g3d5poNaI7GOU"
+       target="_blank"
+       class="btn">
+       🎧 Open My Spotify
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  <p>© Lviosa Web | Dewa 19 Page 💙</p>
+</footer>
+
+</body>
+</html>

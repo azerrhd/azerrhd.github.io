@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hindia - Lviosa</title>
+  <link rel="icon" type="image/png" href="images/L Viosa.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: "Poppins", sans-serif; scroll-behavior: smooth;
+    }
+    body { background-color: #f8fbff; color:#333; line-height: 1.8; }
+
+    header {
+      background-image: url("images/r.jpg");
+      background-size: cover;
+      padding: 15px 30px;
+      position: sticky; top:0; z-index:10; color:white;
+      font-family: "Cinzel Decorative", serif;
+    }
+
+    .logo { font-size:1.5rem; color:white; font-weight:bold; }
+    .logo span { color:#ffb48b; }
+
+    .section-box {
+      max-width: 900px; margin: 60px auto;
+      background:white; border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding:40px; animation: fadeIn 1.2s ease;
+    }
+
+    .section-box img {
+      width:50%; display:block; margin:0 auto 20px; border-radius:10px;
+    }
+
+    h2 { text-align:center; font-size:2rem; 
+      font-family:"Cinzel Decorative", serif;
+      margin-bottom:10px;
+    }
+
+    .highlight { color:#87cefa; font-weight:bold; }
+
+    .album-gallery { margin-top:40px; text-align:center; }
+    .album-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+
+    .album-item {
+      width:250px; background:#f8fbff; border-radius:12px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      text-decoration:none; color:inherit;
+      transition:.3s;
+    }
+    .album-item:hover { transform:translateY(-5px); }
+
+    .album-item img {
+      width:100%; border-radius:12px 12px 0 0;
+    }
+
+    .album-item p { padding:10px; font-weight:500; }
+
+    .btn-area { display:flex; justify-content:space-between; margin-top:30px; }
+    .btn {
+      background:#87cefa; padding:10px 25px;
+      color:white; border-radius:25px;
+      text-decoration:none; font-weight:600; transition:0.3s;
+    }
+    .btn:hover { background:#ffb48bf3; transform:scale(1.05); }
+
+    footer {
+      background-image:url("images/footer.jpg");
+      background-size:cover;
+      color:white; padding:30px;
+      text-align:center;
+      margin-top:60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity:0; transform:translateY(30px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header><h1 class="logo">L<span>viosa</span></h1></header>
+
+<section class="section-box">
+  <img src="images/Hindia.jpg" alt="Hindia">
+
+  <h2>Hindia</h2>
+
+  <p><span class="highlight">Baskara Putra</span> adalah penyanyi, penulis lagu, dan produser musik yang dikenal dengan nama panggung Hindia. Musiknya dipenuhi refleksi diri, keresahan hidup, dan perjalanan emosional yang sangat relate dengan anak muda.</p>
+
+  <p>Ia juga merupakan vokalis dari band <b>.Feast</b> dan anggota grup <b>Lomba Sihir</b>. Lagu-lagunya seperti <i>Evaluasi</i> dan <i>Rumah ke Rumah</i> menjadi soundtrack tumbuh dewasa bagi banyak pendengarnya.</p>
+
+  <div class="album-gallery">
+    <h3 style="font-family:'Cinzel Decorative', serif;">Album Hindia</h3>
+
+    <div class="album-grid">
+      <a href="album/hindia1.html" class="album-item">
+        <img src="images/album1.jpg">
+        <p>Menari Dengan Bayangan</p>
+      </a>
+
+      <a href="album/hindia2.html" class="album-item">
+        <img src="images/album2.jpg">
+        <p>Lagi Pula Hidup Akan Berakhir</p>
+      </a>
+
+      <a href="album/hindia3.html" class="album-item">
+        <img src="images/album3.jpg">
+        <p>Doves, '25 on Blank Canvas</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="btn-area">
+    <a href="index.html#gallery" class="btn">← Back</a>
+    <a href="https://open.spotify.com/artist/4b6FJx2TA4n4dw1sbBm2Fw" target="_blank" class="btn">🎧 Open My Spotify</a>
+  </div>
+</section>
+
+<footer>
+  <p>© Lviosa Web | Hindia Page 💙</p>
+</footer>
+
+</body>
+</html>

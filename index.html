@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUGAS PROYEK</title>
+  <link rel="icon" type="image/png" href="images/L Viosa.png">
+
+  <!-- Font Cinzel Decorative -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* === GLOBAL STYLE === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f8fbff;
+      color: #333;
+    }
+
+    /* === NAVBAR === */
+    header {
+      background-image: url("images/r.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #ffffff;
+      font-weight: bold;
+      font-family: "Cinzel Decorative", serif;
+    }
+
+    .logo span {
+      color: #fffffff3;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffb48bf3;
+    }
+
+    /* === SECTION === */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* === HOME === */
+    .home {
+      background-image: url("images/bawaheder.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #87cefa;
+      margin-bottom: 20px;
+    }
+
+    .home-content h2 span {
+      color: #87cefa;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      background-color: #87cefa;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ffb48bf3;
+    }
+
+    /* === ABOUT === */
+    .about {
+      background: white;
+      color: #444;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    /* === EDUCATION === */
+    .education {
+      background-color: #f0f9ff;
+    }
+
+    .edu-list {
+      list-style: none;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+      line-height: 1.8;
+    }
+
+    /* === PROJECTS === */
+    .projects {
+      background-color: #ffffff;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .project-card {
+      width: 280px;
+      background: #f8fbff;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* === GALLERY (INTERAKTIF) === */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: transform 0.4s ease;
+      border-radius: 10px;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+      filter: brightness(60%);
+    }
+
+    .gallery-item:active {
+      transform: scale(0.95);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      text-align: center;
+    }
+
+    .gallery-item:hover .overlay {
+      opacity: 1;
+    }
+
+    .overlay h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .overlay p {
+      font-size: 0.9rem;
+    }
+
+    /* === CONTACT === */
+    .contact {
+      background-color: #f0f9ff;
+      padding: 80px 20px;
+      border-radius: 15px;
+    }
+
+    .contact-content {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+      transition: all 0.3s ease;
+      outline: none;
+      width: 100%;
+      font-family: inherit;
+    }
+
+    .contact-form input:hover,
+    .contact-form textarea:hover {
+      border-color: #87cefa;
+      box-shadow: 0 0 6px rgba(135, 206, 250, 0.5);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #ffb48bf3;
+      box-shadow: 0 0 10px rgba(255, 180, 139, 0.6);
+      transform: scale(1.02);
+    }
+
+    .contact-form button {
+      background-color: #87cefa;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .contact-form button:hover {
+      background-color: #ffb48bf3;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255, 180, 139, 0.6);
+    }
+
+    /* === FOOTER === */
+    footer {
+      background-image: url("images/footer.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">L<span>viosa</span></h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Favorit</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="home">
+    <div class="home-content">
+      <img src="images/L Viosa.png" alt="Foto Azer" class="profile-img">
+      <h2>Haha gotcha!</h2>
+      <br>
+      <p><b>Hey there, I'm Azer</b><br>didn’t expect you’d open it, but hey I’m glad you did 😄 thanks tho</p>
+
+      <!-- TOMBOL DOWNLOAD CV DI HOME -->
+      <a href="cvazer.pdf" download class="btn">📄 Download CV</a>
+
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <p>Saya <b>Muntazer Zaidulhaq</b>, biasa orang-orang memanggil saya Azer. Saya suka banyak hal, salah satunya adalah mendengar lagu. Saya senang mendengar banyak lagu terutama lagu bergenre indie rock seperti Hindia, .Feast, Perunggu, Sheila On 7, dan banyak lainnya.</p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="education">
+    <h2 class="section-title">Education</h2>
+    <ul class="edu-list">
+      <li><b>2024-2027:</b> MAN Insan Cendekia Gowa</li>
+      <li><b>2027-2031:</b> Sarjana Hukum Universitas Airlangga</li>
+      <li><b>2033-2035:</b> Magister Hukum Universitas Indonesia</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">Penyanyi & Band Favorit</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/baskara.jpg" alt="Baskara">
+        <h3>Penyanyi Favorit</h3>
+        <p style="text-align: justify;">
+          <b>Baskara Putra</b>, yang lebih dikenal dengan nama panggung <b>Hindia</b>, adalah penulis lagu dan vokalis utama band Hindia, serta juga terlibat dalam band Feast dan Lomba Sihir.
+        </p>
+      </div>
+      <div class="project-card">
+        <img src="images/Hindia.jpg" alt="Hindia">
+        <h3>Band Favorit</h3>
+        <p style="text-align: justify;">
+          <b>Hindia</b> dikenal dengan musik yang memadukan elemen indie, pop, dan rock dengan lirik introspektif dan makna mendalam.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery">
+    <h2 class="section-title">Top 5 Band Lokal Versi Saya</h2>
+    <h3 class="section-title">Sebagai Gen Z</h3>
+    <div class="gallery-grid">
+      <a href="hindia.html" class="gallery-item">
+        <img src="images/Hindia.jpg" alt="Hindia">
+        <div class="overlay">
+          <h3>Hindia</h3>
+          <p>Lirik reflektif dan sangat relate dengan kehidupan remaja masa kini. <br>Click for more</p>
+        </div>
+      </a>
+      <a href="perunggu.html" class="gallery-item">
+        <img src="images/Perunggu band.jpg" alt="Perunggu">
+        <div class="overlay">
+          <h3>Perunggu</h3>
+          <p>Musik indie-rock modern dengan lirik kuat dan emosional. <br>Click for more</p>
+        </div>
+      </a>
+      <a href="feast.html" class="gallery-item">
+        <img src="images/fis.jpg" alt=".Feast">
+        <div class="overlay">
+          <h3>.Feast</h3>
+          <p>Band yang menyuarakan keresahan sosial lewat musik keras dan jujur. <br>Click for more</p>
+        </div>
+      </a>
+      <a href="so7.html" class="gallery-item">
+        <img src="images/so7.jpg" alt="Sheila On 7">
+        <div class="overlay">
+          <h3>Sheila On 7</h3>
+          <p>Legenda pop rock Indonesia yang tak lekang oleh waktu. <br>Click for more</p>
+        </div>
+      </a>
+      <a href="dewa19.html" class="gallery-item">
+        <img src="images/dewa19.jpg" alt="Dewa 19">
+        <div class="overlay">
+          <h3>Dewa 19</h3>
+          <p>Karya musiknya ikonik dan masih digemari lintas generasi. <br>Click for more</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact Person</h2>
+    <div class="contact-content">
+      <p>Email: <a href="mailto:brucewayne@gmail.com">brucewayne@gmail.com</a></p>
+      <p>No. Phone: <a href="tel:0811223344">0811223344</a></p>
+      <p>Instagram: <a href="https://instagram.com/ziii01._" target="_blank">@ziii01._</a></p>
+
+      <!-- TOMBOL DOWNLOAD CV DI BAGIAN CONTACT -->
+      <a href="cvazer.pdf" download class="btn" style="margin-top:20px; display:inline-block;">
+        📄 Download My CV
+      </a>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Lviosa Web | Thanks For Visiting 💙</p>
+  </footer>
+
+</body>
+</html>

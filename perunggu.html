@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perunggu - Lviosa</title>
+  <link rel="icon" type="image/png" href="images/L Viosa.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f8fbff;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background-image: url("images/r.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+      font-family: "Cinzel Decorative", serif;
+    }
+
+    .logo span {
+      color: #ffb48b;
+    }
+
+    .perunggu-section {
+      max-width: 900px;
+      margin: 60px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 40px;
+      animation: fadeIn 1.2s ease;
+      position: relative;
+    }
+
+    .perunggu-section img {
+      width: 50%;
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 10px;
+    }
+
+    .perunggu-section h2 {
+      font-family: "Cinzel Decorative", serif;
+      font-size: 2rem;
+      color: #333;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      color: #87cefa;
+      font-weight: bold;
+    }
+
+    /* === ALBUM GALLERY === */
+    .album-gallery {
+      margin-top: 40px;
+      text-align: center;
+      animation: fadeIn 1.4s ease;
+    }
+
+    .album-gallery h3 {
+      font-family: "Cinzel Decorative", serif;
+      font-size: 1.6rem;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .album-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .album-item {
+      width: 250px;
+      background: #f8fbff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .album-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .album-item img {
+      width: 100%;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .album-item p {
+      padding: 10px;
+      color: #333;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* Buttons */
+    .btn-area {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .btn {
+      text-decoration: none;
+      background-color: #87cefa;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background-color: #ffb48bf3;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255,180,139,0.6);
+    }
+
+    footer {
+      background-image: url("images/footer.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="logo">L<span>viosa</span></h1>
+  </header>
+
+  <section class="perunggu-section">
+    <img src="images/Perunggu band.jpg" alt="Perunggu">
+    <h2>Perunggu</h2>
+
+    <p><span class="highlight">Perunggu</span> adalah band indie rock asal Indonesia dengan karakteristik musik yang penuh emosi, jujur, dan berlapis makna. Lagu-lagunya mencerminkan dinamika kehidupan modern dengan aransemen yang kuat dan lirik puitis.</p>
+
+    <p>Mereka berhasil mencuri perhatian melalui dua album penting: <i>Memorandum</i> dan <i>Dalam Dinamika</i>, yang menggambarkan perjalanan emosional dan refleksi kehidupan sehari-hari.</p>
+
+    <!-- === ALBUM SHOWCASE === -->
+    <div class="album-gallery">
+      <h3>Album Favorit Perunggu</h3>
+      <div class="album-grid">
+        <a href="album/perunggu1.html" class="album-item">
+          <img src="images/memorandum.jpg" alt="Memorandum">
+          <p>Memorandum</p>
+        </a>
+
+        <a href="album/perunggu2.html" class="album-item">
+          <img src="images/dalamdi.jpg" alt="Dalam Dinamika">
+          <p>Dalam Dinamika</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- BUTTON AREA -->
+    <div class="btn-area">
+      <a href="index.html#gallery" class="btn">← Back</a>
+
+      <a href="https://open.spotify.com/playlist/2skt7i63QtJI1R2P6eIETu"
+         target="_blank"
+         class="btn">
+         🎧 Open My Spotify
+      </a>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© Lviosa Web | Perunggu Page 💙</p>
+  </footer>
+</body>
+</html>
